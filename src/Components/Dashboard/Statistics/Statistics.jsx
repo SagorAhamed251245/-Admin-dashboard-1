@@ -4,7 +4,7 @@ import StatisticsChart from './StatisticsChart';
 
 const Statistics = () => {
     return (
-        <div className='bg-green-200 col-span-3 row-span-2 font-semibold'>
+        <div className='bg-white rounded-lg col-span-3 row-span-2 font-semibold'>
             <p className='pl-3 pt-3'>Statistics</p>
             <div className='flex  gap-5 justify-start    p-3'>
                 <div className='flex justify-center items-center gap-3'>

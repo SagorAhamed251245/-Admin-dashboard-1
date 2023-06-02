@@ -1,8 +1,14 @@
+import DatePicker from "./DatePicker";
+import EndStatistics from "./EndStatistics";
+import TotalSales from "./TotalSales";
+
 
 const EndRight = () => {
     return (
-        <div className='bg-orange-200 row-span-4 p-3'>
-            end right
+        <div className='bg-white rounded-lg row-span-4 pl-3 pr-3'>
+            <DatePicker></DatePicker>
+            <EndStatistics></EndStatistics>
+            <TotalSales></TotalSales>
         </div>
     );
 };

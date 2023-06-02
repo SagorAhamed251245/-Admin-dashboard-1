@@ -1,6 +1,5 @@
 
-
-import { FaArrowCircleUp } from 'react-icons/fa';
+import { FaArrowCircleDown, FaArrowCircleUp } from 'react-icons/fa';
 import {
     ResponsiveContainer,
     LineChart,
@@ -50,21 +49,22 @@ const data = [
         amt: 2100,
     },
 ];
-const Scorecards = () => {
-
+const Scorecards = ({name, growth, growthPercents, isIncrease }) => {
+          
+    
 
     return (
-        <div className='bg-red-200 col-span-1 p-3'>
+        <div className='bg-white rounded-lg col-span-1 p-3'>
             <div>
-                <p className='font-bold text-base mb-2'>Convertionrate</p>
+                <p className='font-bold text-base mb-2'>{name}</p>
             </div>
             <div>
                 <div className='flex  w-full justify-between items-center font-semibold mb-2'>
                 <p>Today</p>
-                <p className='flex  gap-2 items-center'>30% <FaArrowCircleUp className='text-green-500'></FaArrowCircleUp></p>
+                <p className='flex  gap-2 items-center'>{growth} {isIncrease ? <FaArrowCircleUp className='text-green-500'></FaArrowCircleUp> : <FaArrowCircleDown className='text-red-500'></FaArrowCircleDown>}</p>
                 </div>
                 <div>
-                    <p className='text-2xl font-bold'>19.5%</p>
+                    <p className='text-2xl font-bold'>{growthPercents}</p>
                 </div>
 
             </div>
